@@ -14,6 +14,7 @@ Partial volume correction (PVC) improves the quality of the reconstructed PET im
   # automatically categorise the input data
   datain = nipet.classify_input(folderin, mMRpars)
 
+
 resulting in:
 
   In [1]: datain
@@ -50,6 +51,7 @@ Prior to the PVC, it is recommended to trim and upsample the PET image(s). This 
                store_img = True,
                store_img_intrmd = True)
 
+
 In addition, the following options can be also set:
 
 ================  ==============
@@ -75,6 +77,7 @@ This is a comparison between the original and the trimmed reconstructed image:
   plt.title('Trimmed')
   plt.colorbar()
 
+
 .. figure:: images/orig_vs_trim.png
    :scale: 90 %
    :alt: trimmed image
@@ -87,11 +90,12 @@ PVC
 It is activated by setting the option ``pvcroi`` in the funtion ``mmrchain`` to a list of regions with number label which correspond to the image values of the segmented T1w image, e.g.:
 
 .. code-block:: python
+
 	pvcroi = [
 				[1], # ROI 1 (single parcellation region)
-                [2, 3], # ROI 2 (region consisting of multiple parcellation regions)
-                ...
-              ]
+        [2, 3], # ROI 2 (region consisting of multiple parcellation regions)
+        ...
+            ]
 	recon = nipet.mmrchain( 
                datain,
                mMRpars,
@@ -107,6 +111,7 @@ It is activated by setting the option ``pvcroi`` in the funtion ``mmrchain`` to 
                store_img = True,
                store_img_intrmd = True)
 
+
 In addition, the following options can be also set:
 
 ================  ==============
@@ -117,6 +122,7 @@ Argument          Description
 ``psfkernel``     the point spread function (PSF) specific for the scanner and the object. For the Siemens Biograph scanner, it can be set to ``nimpa.psf_measured(scanner='mmr', scale=trim_scale)``
 ``pvcitr``        set to True in cases when memory is limited, having a longer processing time
 ================  ==============
+
 
 This is a comparison between the trimmed and the PVC reconstructed image:
 
@@ -133,10 +139,10 @@ This is a comparison between the trimmed and the PVC reconstructed image:
   plt.title('PVC')
   plt.colorbar()
 
+
 .. figure:: images/trim_vs_pvc.png
    :scale: 90 %
    :alt: PVC image
 
    Comparison between the trimmed reconstructed images before (left) and after PVC (right)
-
 
