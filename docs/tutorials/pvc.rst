@@ -91,7 +91,6 @@ It is activated by setting the option ``pvcroi`` in the funtion ``mmrchain`` to 
                 [2, 3], # ROI 2 (region consisting of multiple parcellation regions)
                 ...
               ]
-    .. code-block:: python
 	recon = nipet.mmrchain( 
                datain,
                mMRpars,
