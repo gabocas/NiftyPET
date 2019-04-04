@@ -37,19 +37,19 @@ Prior to the PVC, it is recommended to trim and upsample the PET image(s). This 
 
 
 .. code-block:: python
-	recon = nipet.mmrchain( 
-               datain,
-               mMRpars,
-               frames = frmdef,
-               mu_h = muhdct, 
-               mu_o = muodct,
-               itr = 4,
-               fwhm = 0.,
-               trim = True,
-               outpath = opth,
-               fcomment = '_dyn',
-               store_img = True,
-               store_img_intrmd = True)
+	recon = nipet.mmrchain(
+                datain,
+                mMRpars,
+                frames = frmdef,
+                mu_h = muhdct, 
+                mu_o = muodct,
+                itr = 4,
+                fwhm = 0.,
+                trim = True,
+                outpath = opth,
+                fcomment = '_dyn',
+                store_img = True,
+                store_img_intrmd = True)
 
 
 In addition, the following options can be also set:
@@ -92,10 +92,10 @@ It is activated by setting the option ``pvcroi`` in the funtion ``mmrchain`` to 
 .. code-block:: python
 
 	pvcroi = [
-				[1], # ROI 1 (single parcellation region)
-        [2, 3], # ROI 2 (region consisting of multiple parcellation regions)
-        ...
-            ]
+  [1], # ROI 1 (single parcellation region)
+  [2, 3], # ROI 2 (region consisting of multiple parcellation regions)
+  ...
+  ]
 	recon = nipet.mmrchain( 
                datain,
                mMRpars,
