@@ -52,13 +52,13 @@ Prior to the PVC, it is recommended to trim and upsample the PET image(s). This 
 
 In addition, the following options can be also set:
 
-==============  ============
-argument        description
-==============  ============
-``trim_scale``      the scaling factor for upsampling (greater than 1, by default 2)
-``trim_interp``     interpolation order (0-nearest neighbour, 1-linear, as in scipy)
-``trim_memlim``     Set to True for cases when memory is limited, having a longer processing time 
-==============  ==============
+================  ==============
+Argument          Description
+================  ==============
+``trim_scale``    the scaling factor for upsampling (greater than 1, by default 2)
+``trim_interp``   interpolation order (0-nearest neighbour, 1-linear, as in scipy)
+``trim_memlim``   set to True for cases when memory is limited, having a longer processing time 
+================  ==============
 
 This is a comparison between the original and the trimmed reconstructed image:
 
@@ -109,14 +109,14 @@ It is activated by setting the option ``pvcroi`` in the funtion ``mmrchain`` to 
 
 In addition, the following options can be also set:
 
-==============  ============
-argument        description
-==============  ============
-``pvcreg_tool``      co-registration tool.  By default it is NiftyReg, but SPM is also possible (needs `Matlab engine <https://www.mathworks.com/help/matlab/matlab-engine-for-python.html>`_ and more validation)
-``store_rois``     stores the image of PVC ROIs as defined by pvcroi.
+================  ==============
+Argument          Description
+================  ==============
+``pvcreg_tool``   co-registration tool.  By default it is NiftyReg, but SPM is also possible (needs `Matlab engine <https://www.mathworks.com/help/matlab/matlab-engine-for-python.html>`_ and more validation)
+``store_rois``    stores the image of PVC ROIs as defined by pvcroi.
 ``psfkernel``     the point spread function (PSF) specific for the scanner and the object. For the Siemens Biograph scanner, it can be set to ``nimpa.psf_measured(scanner='mmr', scale=trim_scale)``
-``pvcitr``     Set to True in cases when memory is limited, having a longer processing time
-==============  ==============
+``pvcitr``        set to True in cases when memory is limited, having a longer processing time
+================  ==============
 
 This is a comparison between the trimmed and the PVC reconstructed image:
 
