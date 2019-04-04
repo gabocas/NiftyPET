@@ -16,7 +16,7 @@ Partial volume correction (PVC) improves the quality of the reconstructed PET im
 
 resulting in:
 
-   In [1]: datain
+  In [1]: datain
   Out[1]: 
   {'#mumapDCM': 192,
    'T1lbl': '/data/amyloid_brain/T1w_NeuroMorph_Parcellation.nii.gz',
@@ -58,6 +58,7 @@ argument        description
 ``trim_scale``      the scaling factor for upsampling (greater than 1, by default 2)
 ``trim_interp``     interpolation order (0-nearest neighbour, 1-linear, as in scipy)
 ``trim_memlim``     Set to True for cases when memory is limited, having a longer processing time 
+==============  ==============
 
 This is a comparison between the original and the trimmed reconstructed image:
 
@@ -115,6 +116,7 @@ argument        description
 ``store_rois``     stores the image of PVC ROIs as defined by pvcroi.
 ``psfkernel``     the point spread function (PSF) specific for the scanner and the object. For the Siemens Biograph scanner, it can be set to ``nimpa.psf_measured(scanner='mmr', scale=trim_scale)``
 ``pvcitr``     Set to True in cases when memory is limited, having a longer processing time
+==============  ==============
 
 This is a comparison between the trimmed and the PVC reconstructed image:
 
