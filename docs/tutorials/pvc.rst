@@ -15,7 +15,7 @@ Partial volume correction (PVC) improves the quality of the reconstructed PET im
   datain = nipet.classify_input(folderin, mMRpars)
 
 
-resulting in:
+resulting in::
 
   In [1]: datain
   Out[1]: 
@@ -73,11 +73,9 @@ This is a comparison between the original and the trimmed reconstructed image:
   plt.subplot(1,2,1)
   plt.imshow(recon['im'][si/2,:,:], cmap='magma')
   plt.title('Original')
-  plt.colorbar()
   plt.subplot(1,2,2)
   plt.imshow(recon['trimmed']['im'][si,:,:], cmap='magma')
   plt.title('Trimmed')
-  plt.colorbar()
 
 
 .. figure:: images/orig_vs_trim.png
@@ -135,11 +133,9 @@ This is a comparison between the trimmed and the PVC reconstructed image:
   plt.subplot(1,2,1)
   plt.imshow(recon['trimmed']['im'][si,:,:], cmap='magma')
   plt.title('Trimmed')
-  plt.colorbar()
   plt.subplot(1,2,2)
   plt.imshow(recon['impvc'][si,:,:], cmap='magma')
   plt.title('PVC')
-  plt.colorbar()
 
 
 .. figure:: images/trim_vs_pvc.png
